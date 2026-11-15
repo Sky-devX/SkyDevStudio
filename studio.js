@@ -1,7 +1,7 @@
 // Edit this block when the public repository URL changes.
 const SITE_CONFIG = {
-  githubUrl: 'https://github.com/Sky-devX/SkyDevStudio',
-  cloneUrl: 'https://github.com/Sky-devX/SkyDevStudio.git',
+  githubUrl: 'https://github.com/Sky-devX',
+  cloneUrl: 'https://github.com/Sky-devX/SkyDev_programs',
   // Add your PayPal donation URL here. Use {amount} in a PayPal.Me URL to pass the selected amount.
   paypalUrl: ''
 };
