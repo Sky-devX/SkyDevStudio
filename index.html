@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09090a">
+<meta name="description" content="SkyDev Studio brings SkyDev apps, news, and updates together in one place.">
+<title>SkyDev Studio — Your apps. One place.</title>
+<link rel="icon" href="./assets/wing-1.webp">
+<link rel="stylesheet" href="./studio.css">
+<script src="./studio.js" defer></script>
+<!-- Update all GitHub links in the SITE_CONFIG block at the top of studio.js. -->
+</head>
+<body>
+<header class="topbar">
+  <div class="nav-wrap">
+    <a href="#start" class="brand" aria-label="SkyDev Studio Startseite"><img src="./assets/wing-1.webp" alt=""><span>SkyDev<span class="brand-light"> Studio</span></span></a>
+    <nav aria-label="Main navigation"><a href="#studio">Features</a><a href="#apps">Apps</a><a href="#updates">Updates</a></nav>
+    <div class="nav-actions"><a class="github-icon-button" data-github-link href="https://github.com/Sky-devX/SkyDevStudio" target="_blank" rel="noopener noreferrer" aria-label="SkyDev Studio on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.22c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.35-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5Z"/></svg></a><button class="button button-small button-donate" id="open-donation" type="button"><span aria-hidden="true">♥</span><span class="donate-label">Donate</span></button><a class="download-icon-button" href="./downloads/SkyDev-Studio-Setup.exe" download aria-label="Download SkyDev Studio" title="Download SkyDev Studio"><span aria-hidden="true">↓</span></a></div>
+  </div>
+</header>
+<main id="start">
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow"><i class="eyebrow-dot"></i> The SkyDev app launcher</span>
+      <h1>Your apps.<br><span>One place.</span></h1>
+      <p>Discover new programs with SkyDev Studio, keep them up to date, and see what's new at a glance.</p>
+      <div class="hero-actions"><a class="button button-free" href="./downloads/SkyDev-Studio-Setup.exe" download><span aria-hidden="true">↓</span> Get SkyDev Studio</a><a class="button button-primary" href="#studio">Explore features <span aria-hidden="true">↗</span></a><button class="button button-teaser" id="watch-teaser" type="button"><span class="play-disc" aria-hidden="true">▶</span> Watch teaser <small id="teaser-duration-label">0:20</small></button></div>
+      <a class="source-note" data-github-link href="https://github.com/Sky-devX/SkyDevStudio" target="_blank" rel="noopener noreferrer"><span class="source-note-icon">⌘</span> Open source on GitHub</a>
+      <div class="hero-points"><span><b>01</b> Install once</span><span><b>02</b> Discover apps</span><span><b>03</b> Get updates</span></div>
+    </div>
+    <div class="app-stage" aria-label="SkyDev Studio app preview">
+      <div class="stage-glow"></div>
+      <div class="studio-window">
+        <div class="window-bar"><span class="traffic"><i></i><i></i><i></i></span><span class="window-name"><img src="./assets/wing-1.webp" alt="">SkyDev Studio</span><span class="window-caption">APP CENTER</span></div>
+        <div class="window-main">
+          <aside class="app-sidebar" aria-label="Studio Navigation">
+            <span class="side-label">WORKSPACE</span>
+            <button class="side-item is-current" data-page="Home"><span class="side-icon">⌂</span>Home</button>
+            <button class="side-item" data-page="Apps"><span class="side-icon">▦</span>Apps <span class="nav-count">02</span></button>
+            <span class="side-label side-label-spaced">YOUR STUDIO</span>
+            <button class="side-item" data-page="Collections"><span class="side-icon">◈</span>Collections</button>
+            <button class="side-item" data-page="Calendar"><span class="side-icon">▣</span>Calendar</button>
+            <button class="side-item" data-page="Downloads"><span class="side-icon">↓</span>Downloads<span class="download-pulse"></span></button>
+            <div class="sidebar-bottom"><span class="online-dot"></span> Studio ready</div>
+          </aside>
+          <section class="app-content" aria-live="polite">
+            <div class="app-content-top"><div><span class="crumb">SKYDEV STUDIO <b>/</b> <span id="current-page">HOME</span></span><h2 id="view-title">Welcome back.</h2></div><span class="avatar">S</span></div>
+            <div id="app-view"></div>
+          </section>
+        </div>
+        <div class="window-status"><span><i></i> Synced</span><span>SkyDev Workspace <b>↗</b></span></div>
+      </div>
+      <div class="float-note"><span class="float-icon">✦</span><span><b>New in the Studio</b><small>Apps and updates in one place</small></span><i class="float-live"></i></div>
+    </div>
+  </section>
+
+  <section class="trust-strip" aria-label="Studio benefits"><span><i>✦</i> One launcher for SkyDev apps</span><span><i>↻</i> Keep track of updates</span><span><i>◉</i> News right inside the Studio</span></section>
+
+  <section class="section product-section" id="studio">
+    <div class="section-heading"><span class="eyebrow">MORE THAN A DOWNLOAD</span><h2>The Studio stays.<br><span>The catalog grows.</span></h2><p>Install SkyDev Studio once. New apps, collections, and announcements show up right in the app.</p></div>
+    <div class="feature-grid">
+      <article class="feature-card feature-apps"><div class="feature-top"><span class="feature-icon orange-icon">▦</span><span class="feature-number">01 / APPS</span></div><div class="app-stack"><div class="mini-app mini-app-orange"><span>⌘</span><b>SkyDev Tools</b><small>TEST APP</small></div><div class="mini-app mini-app-violet"><span>▶</span><b>Motion Lab</b><small>TEST APP</small></div><div class="mini-app mini-app-dark"><span>✳</span><b>New projects</b><small>IN STUDIO</small></div></div><h3>Discover apps</h3><p>A clear home for SkyDev programs, test versions, and upcoming releases.</p></article>
+      <article class="feature-card feature-news" id="updates"><div class="feature-top"><span class="feature-icon pink-icon">✦</span><span class="feature-number">02 / UPDATES</span></div><div class="news-card"><span class="news-label"><i></i> WHAT'S NEW</span><b>What's new at SkyDev?</b><p>Updates, short videos, and announcements show up right on your Home page.</p><div class="news-meta"><span>SKYDEV STUDIO</span><span>•••</span></div></div><h3>Stay in the loop</h3><p>New programs and announcements arrive as clear, easy-to-read updates in the Studio.</p></article>
+      <article class="feature-card feature-updates"><div class="feature-top"><span class="feature-icon green-icon">↻</span><span class="feature-number">03 / UPDATES</span></div><div class="progress-demo"><div class="progress-head"><b>Motion Lab</b><span>Updating</span></div><div class="progress-track"><i></i></div><div class="progress-foot"><span>Version 1.2.0</span><b>68%</b></div><div class="progress-actions"><button type="button" id="pause-demo">Ⅱ&nbsp; Pause</button><span>Automatic updates: <b>Off</b></span></div></div><h3>You're in control</h3><p>Track download progress and choose in Settings whether updates should start automatically.</p></article>
+    </div>
+  </section>
+
+  <section class="github-section" id="github">
+    <div class="github-card">
+      <div class="github-copy"><span class="eyebrow">OPEN SOURCE · SKYDEV</span><h2>Built in the open.<br><span>Made for your desktop.</span></h2><p>Follow SkyDev Studio on GitHub. Explore the project, keep up with progress, and find the latest releases.</p><div class="clone-command"><code id="clone-command">git clone https://github.com/Sky-devX/SkyDevStudio.git</code><button id="copy-clone" type="button" aria-label="Copy clone command" title="Copy command"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg></button></div><div class="github-actions"><a class="button button-free" data-github-link href="https://github.com/Sky-devX/SkyDevStudio" target="_blank" rel="noopener noreferrer"><span class="github-button-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.22c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.35-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5Z"/></svg></span> View on GitHub</a><a class="button button-outline" data-github-link href="https://github.com/Sky-devX/SkyDevStudio" target="_blank" rel="noopener noreferrer">Explore the project <span>↗</span></a></div></div>
+      <a class="github-art" data-github-link href="https://github.com/Sky-devX/SkyDevStudio" target="_blank" rel="noopener noreferrer" aria-label="Open the SkyDev Studio GitHub repository"><span class="github-art-glow"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.22c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.35-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5Z"/></svg></a>
+    </div>
+  </section>
+
+  <section class="download-banner" id="apps"><div class="banner-orb"></div><div class="banner-copy"><span class="eyebrow">GET STARTED WITH SKYDEV</span><h2>One Studio.<br><span>So many possibilities.</span></h2><p>Get SkyDev Studio and discover programs, news, and updates—all in one place.</p><a class="button button-primary" href="./downloads/SkyDev-Studio-Setup.exe" download>SkyDev Studio for Windows <span aria-hidden="true">↓</span></a><small>Windows installer · Download starts immediately</small></div><div class="banner-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="studio-mark"><img src="./assets/wing-1.webp" alt=""><span>SkyDev<br><b>Studio</b></span></div><div class="orbit-tag tag-a">APPS</div><div class="orbit-tag tag-b">UPDATES</div><div class="orbit-tag tag-c">HOME</div></div></section>
+
+  <section class="faq section"><div><span class="eyebrow">GOOD TO KNOW</span><h2>Easy to get started.<br><span>Everything in view.</span></h2></div><div class="questions"><details><summary>What is SkyDev Studio?</summary><p>SkyDev Studio is the central Windows app where you can find SkyDev programs, news, and updates.</p></details><details><summary>How do new programs appear in the app?</summary><p>The SkyDev catalog gets updated. Once new programs are released, they appear in the Apps section.</p></details><details><summary>Can I control updates myself?</summary><p>Yes. In Settings, choose whether updates download automatically. You can track active downloads in the app.</p></details></div></section>
+</main>
+<footer class="site-footer">
+  <div class="footer-main"><div class="footer-brand-block"><a href="#start" class="brand"><img src="./assets/wing-1.webp" alt=""><span>SkyDev<span class="brand-light"> Studio</span></span></a><p>Your apps. One place.</p><span class="footer-status"><i></i> Built for the SkyDev community</span></div>
+    <div class="footer-column"><h3>PRODUCT</h3><a href="#studio">Features</a><a href="#apps">Download SkyDev Studio</a><a href="#updates">What's new</a></div>
+    <div class="footer-column"><h3>RESOURCES</h3><a data-github-link href="https://github.com/Sky-devX/SkyDevStudio" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#updates">Release notes</a><a href="#teaser-dialog" data-open-teaser>Watch teaser</a></div>
+    <div class="footer-column"><h3>COMMUNITY</h3><a data-github-link href="https://github.com/Sky-devX/SkyDevStudio" target="_blank" rel="noopener noreferrer">Contribute on GitHub</a><a href="#github">Project repository</a><a href="#donation-dialog" data-open-donation>Support SkyDev ♥</a></div>
+    <div class="footer-column"><h3>LEGAL</h3><a href="#" data-placeholder="Imprint details will be added here.">Imprint</a><a href="#" data-placeholder="The privacy policy will be added here.">Privacy policy</a><a href="#" data-placeholder="Terms of service will be added here.">Terms of service</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="copyright-year">2026</span> SkyDev. All rights reserved.</span><span>SkyDev Studio · Windows desktop app</span><a href="#start">Back to top ↑</a></div>
+</footer>
+<dialog id="teaser-dialog" class="teaser-dialog" aria-labelledby="teaser-title"><div class="teaser-shell"><div class="teaser-top"><span><i></i> SKYDEV STUDIO <b>/</b> PRODUCT TEASER</span><button id="close-teaser" type="button" aria-label="Close teaser">×</button></div><h2 id="teaser-title">A cinematic tour of the Studio.</h2><p class="teaser-subtitle" id="teaser-live-caption" aria-live="polite">Explore new programs in one place.</p><div class="teaser-screen"><canvas id="teaser-canvas" width="1280" height="720" aria-label="Animated preview of SkyDev Studio"></canvas><!-- CUSTOM TEASER VIDEO:
+       1. Put your MP4 in dist/assets/ (for example skydev-teaser.mp4).
+       2. Set data-video-src below to "./assets/skydev-teaser.mp4".
+       Leave it blank to use the silent animated fallback. -->
+<video id="teaser-video" data-video-src="" muted playsinline hidden aria-label="SkyDev Studio product teaser"></video><div class="teaser-screen-shade"></div><div class="teaser-badge"><i></i><span id="teaser-scene-label">YOUR APP HUB</span></div></div><div class="teaser-controls"><button id="teaser-toggle" type="button"><span id="teaser-toggle-icon">▶</span><span id="teaser-toggle-label">Play teaser</span></button><div class="teaser-track"><i id="teaser-progress"></i></div><span class="teaser-clock" id="teaser-clock">0:00 / 0:20</span><span class="teaser-sound">NO AUDIO</span></div><p class="teaser-caption">Fictional preview apps · Silent animation fallback.</p></div></dialog>
+<dialog id="donation-dialog" class="donation-dialog" aria-labelledby="donation-title"><div class="donation-shell"><div class="teaser-top"><span><i></i> SUPPORT SKYDEV</span><button id="close-donation" type="button" aria-label="Close donation window">×</button></div><div class="donation-heart" aria-hidden="true">♥</div><h2 id="donation-title">Help SkyDev grow.</h2><p class="donation-description">Your support helps make more useful apps and updates.</p><label for="donation-amount">Choose a one-time amount</label><div class="donation-amount-wrap"><span>€</span><input id="donation-amount" type="number" min="1" max="1000" step="1" value="1" inputmode="decimal" aria-describedby="donation-note"></div><p class="donation-note" id="donation-note">A little support goes a long way. Thank you!</p><button class="button button-primary donation-submit" id="donation-submit" type="button" disabled>PayPal link coming soon</button><span class="donation-secure">One-time support · PayPal</span></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
